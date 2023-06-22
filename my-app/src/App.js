@@ -4,12 +4,16 @@ import List from './components/List/List';
 import AddItems from './components/Form/AddItems';
 
 function App() {
-  const bool = true;
+  
+  const arr = ['item 1', 'item2']
+  const onAddHandler = (data) =>{
+console.log(data)
+  }
   return (
-    <div className={`my-class ${bool ? "App": ""}`
-                                /*{bool && "App"}*/}>
-      <AddItems />
-      <List />
+    <div className='App'> 
+    
+      <AddItems onAdd={onAddHandler}/>
+      <List arr={arr}/>
 
 
     </div> 

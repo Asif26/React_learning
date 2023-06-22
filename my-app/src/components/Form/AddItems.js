@@ -1,11 +1,11 @@
 import Item from "../item/item";
 
-function AddItems(){
+function AddItems({onAdd}){
     let ItemName = "";
     
     const onSubmitHandler = (event)=>{
         event.preventDefault();
-        console.log(ItemName)
+        onAdd(ItemName);
 }
 const onInputChangeHandler = (event) =>{
     ItemName = event.target.value;

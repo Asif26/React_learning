@@ -1,15 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import List from './components/List/List';
-
+import AddItems from './components/Form/AddItems';
 
 function App() {
   const bool = true;
   return (
     <div className={`my-class ${bool ? "App": ""}`
-                                /*{bool && "App"}*/}
-      style={{backgroundColor: bool ? '#000':"#fff"}}>
+                                /*{bool && "App"}*/}>
+      <AddItems />
       <List />
+
+
     </div> 
   );
 }

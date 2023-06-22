@@ -4,11 +4,13 @@ import List from './components/List/List';
 
 
 function App() {
+  const bool = true;
   return (
-    <div className="App">
-      My first react App
+    <div className={`my-class ${bool ? "App": ""}`
+                                /*{bool && "App"}*/}
+      style={{backgroundColor: bool ? '#000':"#fff"}}>
       <List />
-    </div>
+    </div> 
   );
 }
 

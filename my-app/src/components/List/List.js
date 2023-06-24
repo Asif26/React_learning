@@ -1,13 +1,15 @@
 
 import Item from "../item/item";
-function List() {
-    const color = ["Yello", "red", "gren","blue"]
-    const cItems = color.map((color,index) =><Item key={"no-"+index} title={color}/>);
-  return (
+function List(){
+  const arr = ["Item 1", "Item 2"];
+  const items = arr.map((item,index) => {
+    return <Item Key={"no-"+index} title={item} />
+  });
+  return(
     <div>
-      {cItems}
+    {items} 
     </div>
-  );
+  )
 }
 
 export default List;

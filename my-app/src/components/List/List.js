@@ -1,9 +1,8 @@
-
 import Item from "../item/item";
-function List(){
-  const arr = ["Item 1", "Item 2"];
-  const items = arr.map((item,index) => {
-    return <Item Key={"no-"+index} title={item} />
+function List({arr}){
+  
+  const items = arr.map((item,key) => {
+    return <Item Key={key} title={item} />
   });
   return(
     <div>
